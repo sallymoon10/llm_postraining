@@ -1,0 +1,19 @@
+{
+  "provider": "local_transformers",
+  "model": {
+    "model_name": "Qwen/Qwen2.5-1.5B-Instruct",
+    "device": "auto",
+    "torch_dtype": "float16",
+    "trust_remote_code": true,
+    "local_files_only": true
+  },
+  "generation": {
+    "max_input_tokens": 4096,
+    "max_new_tokens": 256,
+    "do_sample": false
+  },
+  "include_prompt_context": false,
+  "max_prompt_chars": 8000,
+  "max_reference_chars": 12000,
+  "max_prediction_chars": 6000
+}

@@ -1,0 +1,35 @@
+{
+  "experiment_name": "zero_shot_problem_oriented",
+  "data": {
+    "data_dir": "/Volumes/MoonSSD/ML/discharge_notes_summarizer",
+    "split": "val",
+    "limit": null,
+    "sample_ids": null,
+    "exclude_categories": ["Discharge summary"],
+    "exclude_iserror": true,
+    "max_notes_per_sample": null,
+    "max_chars_per_note": 2500,
+    "max_total_chars": 30000,
+    "text_truncation": "head_tail"
+  },
+  "prompt": {
+    "template_path": "src/prompts/zero_shot_problem_oriented.txt"
+  },
+  "model": {
+    "model_name": "yasserrmd/MedScholar-1.5B",
+    "device": "auto",
+    "torch_dtype": "float16",
+    "trust_remote_code": true,
+    "local_files_only": true
+  },
+  "generation": {
+    "max_input_tokens": 6144,
+    "max_new_tokens": 768,
+    "do_sample": false
+  },
+  "runtime": {
+    "output_dir": ".experiments/manual/zero_shot_problem_oriented",
+    "save_generations": true,
+    "save_prompts": false
+  }
+}

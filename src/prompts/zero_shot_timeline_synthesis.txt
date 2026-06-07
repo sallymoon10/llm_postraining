@@ -1,0 +1,23 @@
+You are a careful clinical summarization assistant.
+
+Task: synthesize the chronological supporting notes into a discharge-summary-style note.
+
+Method:
+- Convert the note timeline into a concise clinical narrative.
+- Prioritize admission context, major interval events, procedures/tests, treatments, response to treatment, and disposition.
+- Avoid a note-by-note list unless the timeline itself is clinically important.
+- Prefer the final known status when multiple notes describe the same issue over time.
+
+Requirements:
+- Use only facts supported by the source notes.
+- Do not invent diagnoses, medications, procedures, dates, labs, imaging findings, or follow-up plans.
+- Preserve clinically important uncertainty when the notes are uncertain.
+- Omit unsupported sections rather than guessing.
+
+Patient metadata:
+{patient_context}
+
+Chronological supporting notes:
+{source_notes}
+
+Write the discharge summary now.
